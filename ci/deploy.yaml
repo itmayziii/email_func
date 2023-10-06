@@ -26,16 +26,16 @@ steps:
     ]
     env:
       - 'PROJECT_ID=$PROJECT_ID'
-      - 'TOPIC=$TOPIC'
-      - 'REGION=$REGION'
-      - 'TRIGGER_SA=$TRIGGER_SA'
-      - 'RUN_SA=$RUN_SA'
-      - 'FUNCTION_SA=$FUNCTION_SA'
-      - 'MG_API_KEY_MG_TOMMYMAY_DEV=$MG_API_KEY_MG_TOMMYMAY_DEV'
-      - 'BUCKET=$BUCKET'
+      - 'TOPIC=$_TOPIC'
+      - 'REGION=$_REGION'
+      - 'TRIGGER_SA=$_TRIGGER_SA'
+      - 'RUN_SA=$_RUN_SA'
+      - 'FUNCTION_SA=$_FUNCTION_SA'
+      - 'MG_API_KEY_MG_TOMMYMAY_DEV=$_MG_API_KEY_MG_TOMMYMAY_DEV'
+      - 'BUCKET=$_BUCKET'
     waitFor: ['-'] # Run immediately
 
 options:
   logging: 'CLOUD_LOGGING_ONLY'
-tags: ['deploy', 'email-func']
+tags: ['deploy', 'app-email-func', 'cloud-function']
 timeout: '600s' # 10 minutes
