@@ -1,0 +1,41 @@
+steps:
+  - id: 'deploy-cloud-function'
+    name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'gcloud'
+    args: [
+      'functions',
+      'deploy',
+      'email-func',
+      '--project="$$PROJECT_ID"',
+      '--gen2',
+      '--trigger-topic="$$TOPIC"',
+      '--runtime="go121"',
+      '--entry-point="Email"',
+      '--region="$$REGION"',
+      '--source="."',
+      '--ingress-settings="internal-only"',
+      '--no-allow-unauthenticated',
+      '--retry',
+      '--trigger-service-account="$$TRIGGER_SA"',
+      '--run-service-account="$$RUN_SA"',
+      '--service-account="$$FUNCTION_SA"',
+      '--set-secrets="MG_API_KEY_MG_TOMMYMAY_DEV=$$MG_API_KEY_MG_TOMMYMAY_DEV"',
+      '--set-env-vars="PROJECT_ID=$$PROJECT_ID,BUCKET=$$BUCKET"',
+      '--clear-labels',
+      '--update-labels="managed_by=manual,app=email"'
+    ]
+    env:
+      - 'PROJECT_ID=$PROJECT_ID'
+      - 'TOPIC=$TOPIC'
+      - 'REGION=$REGION'
+      - 'TRIGGER_SA=$TRIGGER_SA'
+      - 'RUN_SA=$RUN_SA'
+      - 'FUNCTION_SA=$FUNCTION_SA'
+      - 'MG_API_KEY_MG_TOMMYMAY_DEV=$MG_API_KEY_MG_TOMMYMAY_DEV'
+      - 'BUCKET=$BUCKET'
+    waitFor: ['-'] # Run immediately
+
+options:
+  logging: 'CLOUD_LOGGING_ONLY'
+tags: ['deploy', 'email-func']
+timeout: '600s' # 10 minutes
