@@ -1,4 +1,4 @@
-module email_func
+module github.com/itmayziii/email_func
 
 go 1.21
 
