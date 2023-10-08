@@ -30,7 +30,8 @@ steps:
       - >
         TRIGGER_NAME=$(gcloud functions describe email-func --region us-central1 --format="value(eventTrigger.trigger)");
         SUBSCRIPTION_NAME=$(gcloud eventarc triggers describe $$TRIGGER_NAME --location us-central1 --format="value(transport.pubsub.subscription)");
-        gcloud pubsub subscriptions update $$SUBSCRIPTION_NAME --project="$$PROJECT_ID" --dead-letter-topic="projects/itmayziii/topics/dead-letter"
+        gcloud pubsub subscriptions update $$SUBSCRIPTION_NAME --project="$$PROJECT_ID"
+        --dead-letter-topic="projects/itmayziii/topics/dead-letter" --max-delivery-attempts=10
     env:
       - 'PROJECT_ID=$PROJECT_ID'
     waitFor: ['deploy-cloud-function']
