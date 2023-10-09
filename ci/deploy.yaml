@@ -10,7 +10,7 @@ steps:
         --no-allow-unauthenticated --retry --trigger-service-account="$$TRIGGER_SA" --run-service-account="$$RUN_SA"
         --service-account="$$FUNCTION_SA" --set-secrets="MG_API_KEY_MG_TOMMYMAY_DEV=$$MG_API_KEY_MG_TOMMYMAY_DEV"
         --set-env-vars="PROJECT_ID=$$PROJECT_ID,BUCKET=$$BUCKET" --clear-labels
-        --update-labels="managed_by=manual,app=email"
+        --update-labels="managed_by=cloud_build,app=email"
     env:
       - 'PROJECT_ID=$PROJECT_ID'
       - 'TOPIC=$_TOPIC'
