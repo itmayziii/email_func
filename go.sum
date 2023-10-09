@@ -872,8 +872,8 @@ github.com/hashicorp/golang-lru v0.5.1/go.mod h1:/m3WP610KZHVQ1SGc6re/UDhFvYD7pJ
 github.com/iancoleman/strcase v0.2.0/go.mod h1:iwCmte+B7n89clKwxIoIXy/HfoL7AsD47ZCWhYzw7ho=
 github.com/ianlancetaylor/demangle v0.0.0-20181102032728-5e5cf60278f6/go.mod h1:aSSvb/t6k1mPoxDqO4vJh6VOCGPwU4O0C2/Eqndh1Sc=
 github.com/ianlancetaylor/demangle v0.0.0-20200824232613-28f6c0f3b639/go.mod h1:aSSvb/t6k1mPoxDqO4vJh6VOCGPwU4O0C2/Eqndh1Sc=
-github.com/itmayziii/email v1.1.1 h1:CSNt1qRgRD6pasFPGv9dgmFXpwT4/0l1O8qbEsZLZ8s=
-github.com/itmayziii/email v1.1.1/go.mod h1:2QMI8ykd++OiH0dzYBaIwBk7Wo2mZWITkMAi/4guSI4=
+github.com/itmayziii/email v1.1.2 h1:8fuP1Y6n46QUok2CxHk+ZMNlHYh/QRSi7hzb2zHRE1I=
+github.com/itmayziii/email v1.1.2/go.mod h1:2QMI8ykd++OiH0dzYBaIwBk7Wo2mZWITkMAi/4guSI4=
 github.com/jmespath/go-jmespath v0.4.0 h1:BEgLn5cpjn8UN1mAw4NjwDrS35OdebyEtFe+9YPoQUg=
 github.com/jmespath/go-jmespath v0.4.0/go.mod h1:T8mJZnbsbmF+m6zOOFylbeCJqk5+pHWvzYPziyZiYoo=
 github.com/json-iterator/go v1.1.10 h1:Kz6Cvnvv2wGdaG/V8yMvfkmNiXq9Ya2KUv4rouJJr68=

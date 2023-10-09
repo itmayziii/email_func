@@ -5,7 +5,7 @@ go 1.21
 require (
 	cloud.google.com/go/logging v1.8.1
 	github.com/GoogleCloudPlatform/functions-framework-go v1.8.0
-	github.com/itmayziii/email v1.1.1
+	github.com/itmayziii/email v1.1.2
 	github.com/mailgun/mailgun-go/v4 v4.11.0
 	gocloud.dev v0.34.0
 )
